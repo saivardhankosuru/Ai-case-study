@@ -57,3 +57,67 @@ The program tests the final sorting rule by applying it to a new randomly genera
 ## **Example Output**
 
 The final output will display the traits of a newly generated student along with the house they have been sorted into using the optimized sorting rule. For example:
+
+
+
+
+
+
+
+
+# **Hogwarts Map with Secret Passages**
+
+## **Overview**
+
+This Python project simulates the layout of Hogwarts, featuring a graph representation of key locations within the magical school. It includes basic connectivity between locations and a system for generating secret passages that allow students to navigate the castle in unexpected ways. Additionally, a **Depth-First Search (DFS)** algorithm is implemented to discover paths between locations, taking into account these secret passages.
+
+## **Features**
+
+- **Graph Representation of Hogwarts Locations**: Locations like the Great Hall, Library, Dungeons, etc., are connected in a way that reflects the Hogwarts layout.
+- **Secret Passages**: Random secret passages are created between locations to provide hidden routes for exploration.
+- **Depth-First Search (DFS)**: A DFS algorithm is implemented to find paths from one location to another, considering both regular and secret routes.
+
+## **Classes**
+
+### **HogwartsMap**
+
+The `HogwartsMap` class represents the magical school and its locations. It contains methods to:
+1. **Generate the Hogwarts graph** - This method creates a set of locations and their connections, simulating the structure of Hogwarts.
+2. **Generate secret passages** - Randomly creates secret passages between locations, which are then incorporated into the graph.
+3. **Display the graph** - Prints out the locations and their connections, as well as any generated secret passages.
+
+#### **Methods:**
+- `__init__(self, num_locations=10)`:
+  - Initializes the map with a given number of locations and generates both the graph and secret passages.
+  
+- `generate_hogwarts_graph(self)`:
+  - Generates the basic connectivity between locations, including key areas such as the Great Hall, Library, Charms Class, and more.
+  
+- `generate_secret_passages(self)`:
+  - Randomly creates a set of secret passages and adds them to the graph.
+  
+- `display_graph(self)`:
+  - Displays the graph’s connections and the list of secret passages for debugging and visualization purposes.
+
+### **dfs_secret_passage_discovery**
+
+This function performs **Depth-First Search (DFS)** to find a path between a starting location and a target location, considering the secret passages as valid routes.
+
+#### **Arguments:**
+- `hogwarts_map` (HogwartsMap): The map object containing the Hogwarts layout and secret passages.
+- `start_location` (int): The starting location for the search.
+- `target_location` (int): The target location to find the path to.
+
+#### **Returns:**
+- `list`: A list of locations representing the path, or `None` if no path is found.
+
+## **Usage Example**
+
+### **1. Create a Hogwarts Map**
+
+```python
+# Initialize a map of Hogwarts with 10 locations
+hogwarts_map = HogwartsMap(num_locations=10)
+
+# Display the graph and secret passages
+hogwarts_map.display_graph()
