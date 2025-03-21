@@ -121,3 +121,35 @@ hogwarts_map = HogwartsMap(num_locations=10)
 
 # Display the graph and secret passages
 hogwarts_map.display_graph()
+
+
+
+
+
+
+
+
+# **Hogwarts Philosopher's Stone Search with Greedy Best-First Search**
+
+This repository contains a Python implementation of the Greedy Best-First Search (GBFS) algorithm applied to a simplified scenario: finding the Philosopher's Stone in Hogwarts based on magical energy levels.
+
+## Overview
+
+This project demonstrates how GBFS can be used for pathfinding when guided by a heuristic function. In this case, the heuristic estimates the distance to the Philosopher's Stone based on readings of magical energy, guiding the search towards locations with higher energy concentrations. This is a simplified version of the problem, allowing to focus on the GBFS algorithm core implementation.
+
+## Algorithm
+
+Greedy Best-First Search is an informed search algorithm that explores a graph by expanding the node that is estimated to be closest to the goal. It uses a heuristic function to estimate the distance from a node to the goal and always chooses the path that appears to be the best. It can find a solution more quickly than uninformed search algorithms, but it doesn't guarantee the optimal solution.
+
+## Scenario
+
+The problem is set in the world of Hogwarts, where the Philosopher's Stone is hidden in a secret chamber. The task is to find the path from the entrance of the chamber to the stone. The search is guided by magical energy readings, with the assumption that the energy levels increase closer to the stone's location.
+
+## Implementation
+
+The implementation consists of the following functions:
+
+- `greedy_best_first_search(start_node, goal_node, get_neighbors, heuristic)`: The main function that implements the GBFS algorithm.
+- `magical_energy_heuristic(node, goal_node)`: Heuristic function that estimates the distance to the goal based on the difference in magical energy.
+- `get_magical_energy(node)`: A dummy function (to be replaced) that should return the magical energy level at a given node.
+- `get_neighbors_example_GBFS(node)`: A dummy function that returns a list of neighboring nodes, representing connections within Hogwarts.
