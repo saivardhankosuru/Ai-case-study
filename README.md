@@ -38,7 +38,7 @@ Implement Greedy Best-First Search (GBFS) to guide the student through the castl
 4.  **No Path Found:** If the priority queue is empty and the goal has not been reached, return failure.
 
 ### **Expected Output:**
-
+Path found: ['Entrance Hall', 'Chamber 1', 'Secret Passage' ...  'Philosopher's Stone Chamber']  # Actual path depends on implementation
 
 
 # **Sorting Hat Genetic Algorithm**
@@ -97,9 +97,111 @@ After a set number of generations, the best sorting rule is returned, representi
 
 The program tests the final sorting rule by applying it to a new randomly generated student. The traits of the new student are printed, and the house they are sorted into (using the best sorting rule) is displayed.
 
-## **Example Output**
+## **Output**
 
-The final output will display the traits of a newly generated student along with the house they have been sorted into using the optimized sorting rule. For example:
+Generation 1: Best fitness = 10
+Generation 2: Best fitness = 12
+Generation 3: Best fitness = 13
+Generation 4: Best fitness = 14
+Generation 5: Best fitness = 15
+Generation 6: Best fitness = 15
+Generation 7: Best fitness = 15
+Generation 8: Best fitness = 16
+Generation 9: Best fitness = 16
+Generation 10: Best fitness = 16
+Generation 11: Best fitness = 16
+Generation 12: Best fitness = 16
+Generation 13: Best fitness = 16
+Generation 14: Best fitness = 16
+Generation 15: Best fitness = 16
+Generation 16: Best fitness = 16
+Generation 17: Best fitness = 16
+Generation 18: Best fitness = 16
+Generation 19: Best fitness = 16
+Generation 20: Best fitness = 16
+Generation 21: Best fitness = 16
+Generation 22: Best fitness = 16
+Generation 23: Best fitness = 16
+Generation 24: Best fitness = 16
+Generation 25: Best fitness = 16
+Generation 26: Best fitness = 16
+Generation 27: Best fitness = 16
+Generation 28: Best fitness = 16
+Generation 29: Best fitness = 16
+Generation 30: Best fitness = 16
+Generation 31: Best fitness = 16
+Generation 32: Best fitness = 16
+Generation 33: Best fitness = 16
+Generation 34: Best fitness = 16
+Generation 35: Best fitness = 16
+Generation 36: Best fitness = 16
+Generation 37: Best fitness = 16
+Generation 38: Best fitness = 16
+Generation 39: Best fitness = 16
+Generation 40: Best fitness = 16
+Generation 41: Best fitness = 16
+Generation 42: Best fitness = 16
+Generation 43: Best fitness = 16
+Generation 44: Best fitness = 16
+Generation 45: Best fitness = 16
+Generation 46: Best fitness = 16
+Generation 47: Best fitness = 16
+Generation 48: Best fitness = 16
+Generation 49: Best fitness = 16
+Generation 50: Best fitness = 16
+Generation 51: Best fitness = 16
+Generation 52: Best fitness = 16
+Generation 53: Best fitness = 16
+Generation 54: Best fitness = 16
+Generation 55: Best fitness = 16
+Generation 56: Best fitness = 16
+Generation 57: Best fitness = 16
+Generation 58: Best fitness = 16
+Generation 59: Best fitness = 16
+Generation 60: Best fitness = 16
+Generation 61: Best fitness = 16
+Generation 62: Best fitness = 16
+Generation 63: Best fitness = 16
+Generation 64: Best fitness = 16
+Generation 65: Best fitness = 16
+Generation 66: Best fitness = 16
+Generation 67: Best fitness = 16
+Generation 68: Best fitness = 16
+Generation 69: Best fitness = 16
+Generation 70: Best fitness = 16
+Generation 71: Best fitness = 16
+Generation 72: Best fitness = 16
+Generation 73: Best fitness = 16
+Generation 74: Best fitness = 16
+Generation 75: Best fitness = 16
+Generation 76: Best fitness = 16
+Generation 77: Best fitness = 16
+Generation 78: Best fitness = 16
+Generation 79: Best fitness = 16
+Generation 80: Best fitness = 16
+Generation 81: Best fitness = 16
+Generation 82: Best fitness = 16
+Generation 83: Best fitness = 16
+Generation 84: Best fitness = 16
+Generation 85: Best fitness = 16
+Generation 86: Best fitness = 16
+Generation 87: Best fitness = 16
+Generation 88: Best fitness = 16
+Generation 89: Best fitness = 16
+Generation 90: Best fitness = 16
+Generation 91: Best fitness = 16
+Generation 92: Best fitness = 16
+Generation 93: Best fitness = 16
+Generation 94: Best fitness = 16
+Generation 95: Best fitness = 16
+Generation 96: Best fitness = 16
+Generation 97: Best fitness = 16
+Generation 98: Best fitness = 16
+Generation 99: Best fitness = 16
+Generation 100: Best fitness = 16
+
+New Student Traits: {'bravery': 6, 'intelligence': 1, 'ambition': 4, 'loyalty': 6}
+Sorted into: Hufflepuff
 
 
 
@@ -153,5 +255,6 @@ This function performs **Depth-First Search (DFS)** to find a path between a sta
 
 #### **Returns:**
 - `list`: A list of locations representing the path, or `None` if no path is found.
-
+### **OUTPUT**
+Path found: ['Great Hall', 'Potions Classroom']
 
