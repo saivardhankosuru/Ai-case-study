@@ -1,3 +1,46 @@
+## Case Study: Hogwarts School of Witchcraft and Wizardry
+
+Hogwarts is a complex environment filled with magical obstacles and dynamic elements. This case study applies Artificial Intelligence (AI) search algorithms to solve problems within Hogwarts, such as navigating the castle, traversing a Triwizard Maze, and customizing a magic wand.
+
+### Algorithm: Greedy Best-First Search (GBFS) - Finding the Philosopher's Stone
+
+**[Link to program: `[Your_GitHub_Link_Here]`]**  (Replace with the actual link to your GBFS code file in the repository)
+
+**Narrative:**
+
+The Philosopher's Stone is hidden deep within Hogwarts, protected by a series of magical challenges and chambers. To find it, a student must navigate through these obstacles, using clues that indicate proximity to the stone. The search is guided by the belief that the magical energy emanating from the Stone increases as the student gets closer.
+
+**Task:**
+
+Implement Greedy Best-First Search (GBFS) to guide the student through the castle and chambers.  The search should prioritize locations with higher readings of magical energy, with the goal of quickly finding the Philosopher's Stone.
+
+**Challenges:**
+
+*   **Designing the Heuristic:** The success of GBFS depends on a well-designed heuristic function that accurately estimates the distance to the Stone. The heuristic should consider the magical energy levels, proximity to known challenges, and other relevant factors.
+*   **Magical Hazards:**  The path may be blocked by magical creatures or spells guarding the chamber, requiring the student to bypass them or find alternative routes.
+*   **False Leads:**  Decoy rooms may contain similar magical energy, requiring the student to evaluate their options and avoid unnecessary detours.
+
+**Extension:**
+
+*   **Multi-Objective Navigation:** Introduce secondary objectives, such as collecting protective charms or solving riddles along the way, to make the search more complex.
+
+**Algorithm Flowchart:**
+
+1.  **Define Heuristic Function:** Create a function `h(node, goal)` that estimates the distance to the Philosopher's Stone based on magical energy (and potentially other factors).
+2.  **Initialize Priority Queue:** Add the starting location to a priority queue, with priority equal to `h(start, goal)`.
+3.  **While Priority Queue is not Empty:**
+    *   a. **Dequeue Node:** Remove the node with the lowest heuristic value from the priority queue.
+    *   b. **Goal Check:** If the node is the goal (Philosopher's Stone location), return the path.
+    *   c. **Expand Node:** Find the neighbors of the current node.
+    *   d. **Add Neighbors to Queue:** For each neighbor:
+        *   Calculate `h(neighbor, goal)`.
+        *   Add the neighbor to the priority queue, with priority equal to `h(neighbor, goal)`.
+4.  **No Path Found:** If the priority queue is empty and the goal has not been reached, return failure.
+
+### **Expected Output:**
+
+
+
 # **Sorting Hat Genetic Algorithm**
 
 ## **Introduction**
@@ -111,45 +154,4 @@ This function performs **Depth-First Search (DFS)** to find a path between a sta
 #### **Returns:**
 - `list`: A list of locations representing the path, or `None` if no path is found.
 
-## **Usage Example**
 
-### **1. Create a Hogwarts Map**
-
-```python
-# Initialize a map of Hogwarts with 10 locations
-hogwarts_map = HogwartsMap(num_locations=10)
-
-# Display the graph and secret passages
-hogwarts_map.display_graph()
-
-
-
-
-
-
-
-
-# **Hogwarts Philosopher's Stone Search with Greedy Best-First Search**
-
-This repository contains a Python implementation of the Greedy Best-First Search (GBFS) algorithm applied to a simplified scenario: finding the Philosopher's Stone in Hogwarts based on magical energy levels.
-
-## Overview
-
-This project demonstrates how GBFS can be used for pathfinding when guided by a heuristic function. In this case, the heuristic estimates the distance to the Philosopher's Stone based on readings of magical energy, guiding the search towards locations with higher energy concentrations. This is a simplified version of the problem, allowing to focus on the GBFS algorithm core implementation.
-
-## Algorithm
-
-Greedy Best-First Search is an informed search algorithm that explores a graph by expanding the node that is estimated to be closest to the goal. It uses a heuristic function to estimate the distance from a node to the goal and always chooses the path that appears to be the best. It can find a solution more quickly than uninformed search algorithms, but it doesn't guarantee the optimal solution.
-
-## Scenario
-
-The problem is set in the world of Hogwarts, where the Philosopher's Stone is hidden in a secret chamber. The task is to find the path from the entrance of the chamber to the stone. The search is guided by magical energy readings, with the assumption that the energy levels increase closer to the stone's location.
-
-## Implementation
-
-The implementation consists of the following functions:
-
-- `greedy_best_first_search(start_node, goal_node, get_neighbors, heuristic)`: The main function that implements the GBFS algorithm.
-- `magical_energy_heuristic(node, goal_node)`: Heuristic function that estimates the distance to the goal based on the difference in magical energy.
-- `get_magical_energy(node)`: A dummy function (to be replaced) that should return the magical energy level at a given node.
-- `get_neighbors_example_GBFS(node)`: A dummy function that returns a list of neighboring nodes, representing connections within Hogwarts.
